@@ -23,6 +23,11 @@
     .descripsi p{
         font-size: 16px;
     }
+
+    .descripsi li{
+    font-size: 16px;
+}
+
 }
 @media (max-width: 767px) {
     .card .img-wrapper {
@@ -58,11 +63,17 @@
     .descripsi p{
         font-size: 24px;
     }
+    .descripsi li{
+        font-size: 24px;
+    }
 
     .service{
         width: 300px;
         
         padding: 10px;
         align-items: center;
+    }
+    .card-img-team{
+        height: 20rem;
     }
 }

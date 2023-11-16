@@ -1,6 +1,7 @@
 :root{
     --primary:#3DA50C;
     --secondary:#F6F5F5;
+    --third:#FF7629;
     --light: #F0E7E7;
     --dark: #14141F;
 }
@@ -13,7 +14,7 @@
 }
 
 body{
-    font-family: 'Poppins';
+    font-family: "Poppins", sans-serif;
     background-color: white;
     min-height: 100vh;
     display: flex;
@@ -24,7 +25,7 @@ body{
 /* content */
 
 .hero-element{
-    background-image: url('./Maggot.jpg');
+    background-image: url('../img/Maggot.png');
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
@@ -52,6 +53,11 @@ body{
 
 }
 
+.content-service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .container-service{
     display: flex;
     flex-direction: column;
@@ -73,11 +79,11 @@ body{
 }
 
 .service h3{
-    font-size: 20px;
+    font-size: x-large;
 }
 
 .service p{
-    font-size: 10px;
+    font-size: small;
 }
 
 .container-img {
@@ -139,8 +145,51 @@ body{
     font-size: 8px;
 }
 
+.descripsi li{
+    font-size: 8px;
+}
+
 .card-img-descripsi{
     padding: 100px;
+}
+
+.login{
+    background-color: var(--third);
+    color: var(--light);
+    text-align: center;
+    border: none;
+}
+
+.form-control {
+    border-color: #ced4da;
+}
+
+.form-control:focus {
+    border-color: var(--third) !important;
+    box-shadow: 0 0 0 0.2rem var(--third) !important;
+}
+
+.card-login h2{
+    color: var(--third);
+    font-weight: bold;
+}
+.card-register h2{
+    color: var(--third);
+    font-weight: bold;
+}
+
+.img-visiMisi img{
+    border-radius: 20px 0px 0px 50px;
+}
+
+.team{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-img-team{
+    height: 10rem;
 }
 
 footer{
@@ -151,6 +200,7 @@ footer{
 
 footer h2{
     color: var(--light);
+    font-size:xx-large;
 }
 footer h4{
     font-size: small;
