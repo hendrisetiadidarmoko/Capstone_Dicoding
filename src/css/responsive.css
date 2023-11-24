@@ -26,7 +26,11 @@
 
     .descripsi li{
     font-size: 16px;
-}
+    
+    }
+    .rectangle-img img{
+        height: 8rem;
+    }
 
 }
 @media (max-width: 767px) {
@@ -53,6 +57,9 @@
         padding: 10px;
         align-items: center;
     }
+    .rectangle-img img{
+        height: 10rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -61,10 +68,11 @@
     }
     
     .descripsi p{
-        font-size: 24px;
+        font-size: 16px;
+        
     }
     .descripsi li{
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .service{
