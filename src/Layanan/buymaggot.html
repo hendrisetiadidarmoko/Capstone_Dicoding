@@ -29,28 +29,28 @@
                 <div class=" col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 ">
                     <div class="card buy-container p-3 rounded">
                         <div class="card-body">
-                            <h2 class="text-center card-title">Beli Maggot</h2>
+                            <h2 class="text-center card-title fw-bold">Beli Maggot</h2>
                             <form>
                                 <!-- Nama -->
                                 <div class="mb-3">
-                                    <label for="nama" class="form-label">Nama</label>
+                                    <label for="nama" class="form-label fw-semibold">Nama</label>
                                     <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
                                 </div>
                 
                                 <!-- Alamat -->
                                 <div class="mb-3">
-                                    <label for="alamat" class="form-label">Alamat</label>
+                                    <label for="alamat" class="form-label fw-semibold">Alamat</label>
                                     <textarea class="form-control" id="alamat" placeholder="Masukkan alamat Anda"></textarea>
                                 </div>
                 
                                 <!-- Nomor Telepon -->
                                 <div class="mb-3">
-                                    <label for="nomor" class="form-label">Nomor Telepon</label>
+                                    <label for="nomor" class="form-label fw-semibold">Nomor Telepon</label>
                                     <input type="tel" class="form-control" id="nomor" placeholder="Masukkan nomor telepon Anda">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="maggotType" class="form-label">Jenis Maggot</label>
+                                    <label for="maggotType" class="form-label fw-semibold">Jenis Maggot</label>
                                     <select class="form-select" id="maggotType" aria-label="Pilih Jenis Maggot">
                                         <option value="dewasa">Maggot Dewasa</option>
                                         <option value="child">Maggot Child</option>
@@ -60,23 +60,23 @@
                                 <div class="row">
                                     <!-- Jumlah Barang -->
                                     <div class="col-md-6">
-                                        <label for="quantity" class="form-label">Jumlah Maggot/Ons</label>
+                                        <label for="quantity" class="form-label fw-semibold">Jumlah Maggot/Ons</label>
                                         <input type="number" class="form-control" id="quantity" placeholder="Jumlah" min="1" value="1" oninput="calculatePrice()">
                                     </div>
 
                                     <!-- Harga -->
                                     <div class="col-md-6">
-                                        <label for="price" class="form-label">Harga</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text">Rp</span>
-                                            <input type="text" class="form-control" id="price" readonly>
+                                        <label for="price" class="form-label fw-semibold">Harga</label>
+                                        <div class="input-group ">
+                                            <span class="input-group-text fw-semibold ">Rp</span>
+                                            <input type="text" class="form-control " id="price" readonly>
                                         </div>
                                     </div>
                                         
                                 </div>
 
                                 <!-- Tombol Submit -->
-                                <button type="submit" class="btn btn-primary w-100 my-4">Kirim</button>
+                                <button type="submit" class="btn buyMaggot w-100 my-4 fw-bold ">Kirim</button>
                             </form>
                         </div>
                     </div>

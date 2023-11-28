@@ -22,6 +22,7 @@
     
     .descripsi p{
         font-size: 16px;
+        line-height: 24px;
     }
 
     .descripsi li{
@@ -32,6 +33,44 @@
         height: 8rem;
     }
 
+    .box-img{
+        height: 20rem;
+    }
+    
+    .box-top {
+        width: 60px;
+        height: 60px;
+    }
+
+    .box-bottom {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service{
+        height: 230px;
+        width: 200px;
+    }
+
+    .trapesium p{
+        font-size: medium;
+    }
+
+    .product{
+        height: 8rem;
+    }
+
+    .trapesium{
+        border-bottom: 8rem solid var(--primary);
+    }
+
+    .btn-link{
+        width: 7rem;
+    }
+
+    .btn-link a{
+        font-size: small;
+    }
 }
 @media (max-width: 767px) {
     .card .img-wrapper {
@@ -56,10 +95,32 @@
         width: 300px;
         padding: 10px;
         align-items: center;
+        height: 220px;
     }
     .rectangle-img img{
         height: 10rem;
     }
+
+    .img-profile img{
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .img-profile label{
+        width: 12rem;
+    }
+
+    
+    .box-top {
+        width: 80px;
+        height: 80px;
+    }
+
+    .box-bottom {
+        width: 80px;
+        height: 80px;
+    }
+    
 }
 
 @media (min-width: 1200px) {
@@ -83,5 +144,14 @@
     }
     .card-img-team{
         height: 20rem;
+    }
+
+    .img-profile img{
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .img-profile label{
+        width: 15rem;
     }
 }

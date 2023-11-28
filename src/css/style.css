@@ -48,6 +48,8 @@ body{
     padding-bottom: 10%;
     height: auto;
     width: 100%;
+    opacity: 3;
+    background-color: var(--primary);
 }
 .hero-element h1{
     font-size: 25px;
@@ -82,8 +84,8 @@ body{
 .service{
     background-color: var(--primary);
     color: var(--secondary);
-    height: 200px;
-    width: 200px;
+    height: 210px;
+    width: 220px;
     margin: 10px;
     padding: 5px;
 }
@@ -100,6 +102,8 @@ body{
 .service p{
     font-size: small;
 }
+
+
 
 .container-img {
     position:absolute;
@@ -125,16 +129,20 @@ body{
     
 }
 
+.box-img{
+    height: 11.2rem;
+}
+
 .box-top {
     background-color: var(--primary);
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
 }
 
 .box-bottom {
     background-color: var(--primary);
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     position: absolute; /* Menggunakan position: absolute */
     bottom: 0;
     right: 0;
@@ -154,13 +162,16 @@ body{
 .descripsi h2{
     text-align: left;
     font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
 }
 
 .descripsi p{
     font-size: 8px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 14px;
 }
 
 .descripsi li{
@@ -176,6 +187,14 @@ body{
     color: var(--light);
     text-align: center;
     border: none;
+    cursor: pointer;
+}
+
+.login:hover{
+    background-color: var(--light);
+    border: 1px solid var(--dark);
+    color: var(--dark);
+    width: 100%;
 }
 
 .form-control {
@@ -198,6 +217,7 @@ body{
 
 .img-visiMisi img{
     border-radius: 20px 0px 0px 50px;
+    display: block;
 }
 
 .team{
@@ -262,6 +282,11 @@ body{
     color: var(--dark);
 }
 
+.btn-admin{
+    background-color: #546EF7;
+    color: var(--secondary);
+}
+
 .service-img-sell h4{
     font-style: italic;
     font-weight: 600;
@@ -275,7 +300,7 @@ body{
 
 .admin-question .btn-buy{
     background-color: var(--third);
-    color: var(--light);
+    color: var(--secondary);
 }
 
 .admin-question .btn-buy:hover{
@@ -286,6 +311,10 @@ body{
 
 .buy-container{
     background-color: var(--secondary);
+}
+
+.buy-container h2{
+    color: var(--primary);
 }
 
 .color-service{
@@ -308,6 +337,12 @@ body{
     font-weight: 600;
 }
 
+.color-service h4{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+}
+
 .color-service p{
     font-size: 12px;
     font-style: normal;
@@ -324,10 +359,23 @@ body{
 .btn-service-payment a{
     background-color: var(--primary);
     width: 100%;
-    color: white;
+    color: var(--secondary);
 }
 
 .btn-service-payment a:hover{
+    background-color: var(--light);
+    border: 1px solid var(--dark);
+    color: var(--dark);
+    width: 100%;
+}
+
+.buyMaggot{
+    background-color: var(--primary);
+    border: none;
+    color: var(--secondary);
+}
+
+.buyMaggot:hover{
     background-color: var(--light);
     border: 1px solid var(--dark);
     color: var(--dark);
@@ -379,19 +427,135 @@ body{
     font-size: medium;
 }
 
-.img-profile{
-    width: 8rem;
-    height: 8rem;
+.img-profile img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.img-profile label{
+    display: block;
+    width: 10rem;
+    height: 2rem;
+    background-color: var(--secondary);
+    color: var(--dark);
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid var(--dark);
+    margin: 12px auto;
+}
+
+.img-profile input{
+    display: none ;
 }
 
 .green-service{
     background-color: var(--primary);
-    color: var(--light);
+    color: var(--secondary);
 }
 
 .send-service{
     background-color: #DEB887;
 }
+
+.card-blog h1{
+    font-weight: bold;
+}
+
+.card-blog img{
+    object-fit: cover;
+    display: block;
+}
+
+.card-blog p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.card-blog h2{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.card-blog h1{
+    font-size: 35px;
+    font-style: normal;
+    line-height: 36px;
+}
+
+.product{
+    height: 6rem;
+}
+
+.trapesium{
+    width: 60%; 
+    height: 0; 
+    border-bottom: 6rem solid var(--primary);
+    border-right: 60px solid transparent;
+    margin-bottom:50px;
+}
+
+.trapesium p{
+    font-size: 8px;
+}
+
+.btn-link{
+    text-decoration: none;
+    background-color: var(--third);
+    width: 5rem;
+    height: 1.7rem;
+    border-radius: 10px;
+    font-size: 8px;
+    cursor: pointer;
+}
+
+.btn-link a{
+    font-size: 8px;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.inverted-trapesium{
+    width: 100%;
+}
+
+.inverted-trapesium img{
+    height: 100%;
+    width: 60%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-card{
+    font-size: medium;
+}
+
+.descripsi-img{
+    display: block;
+}
+
+.link-footer{
+    height: 30px;
+}
+
+a, button{
+    cursor: pointer;
+}
+
+a,
+input,
+button,
+textarea {
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+}
+
 footer{
     margin-top: 3rem;
     background-color: var(--primary);
@@ -399,19 +563,19 @@ footer{
 }
 
 footer h2{
-    color: var(--light);
+    color: var(--secondary);
     font-size:xx-large;
 }
 footer h4{
     font-size: small;
-    color: var(--light);
+    color: var(--secondary);
 }
 footer a{
     text-decoration: none;
-    color: var(--light);
+    color: var(--secondary);
 }
 
 footer .mdi{
-    color: var(--light);
+    color: var(--secondary);
     font-size: small;
 }
