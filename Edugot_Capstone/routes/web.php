@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +15,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//route admin
+Route::get('/admin', function () {
+    return view('admin.index');
+})->name('admin.index');
+
+Route::resource('admin/product', ProductController::class);
+
+Route::put('/admin/product/stock-update/{product}', [ProductController::class, 'addStock'])->name('product.updateStock');
+Route::get('/admin/product/stock-add/{product}', [ProductController::class, 'showAddStock'])->name('product.showAddStock');
+
+Route::resource('admin/article', ArticleController::class);
+
+Route::get('/admin/article', function () {
+    return view('admin.article');
+})->name('admin.article');
+
+Route::get('/admin/order', function () {
+    return view('admin.order');
+})->name('admin.order');
+
+//route pengguna
 Route::get('/', function () {
     return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about');
 });
 
 Route::get('/login', function () {

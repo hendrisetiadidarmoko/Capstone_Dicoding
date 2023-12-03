@@ -1,0 +1,11 @@
+.carousel {
+    width: fit-content !important;
+}
+.carousel img {
+    height: 300px;
+    width: auto;
+}
+
+.display-7{
+    font-size: 1.25rem;
+}

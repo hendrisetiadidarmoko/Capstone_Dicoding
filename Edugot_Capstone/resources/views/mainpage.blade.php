@@ -47,7 +47,7 @@
                     <li><a href="/" class="active">Beranda</a></li>
                     <li><a href="#">Layanan</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">Tentang kami</a></li>
+                    <li><a href="/about">Tentang kami</a></li>
                     <li><a href="{{ url('login') }}" id="login">Masuk</a></li>
                 </ul>
             </nav>
@@ -61,72 +61,70 @@
     </main>
 
     <footer>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col col-3">
-                        <a href="">
-                            <h1>LOGO</h1>
-                        </a>
-                        <a href="">
-                            <h4 class="fs-6">Tageline Perusahaan</h4>
-                        </a>
-                    </div>
-                    <div class="col col-3">
-                        <h2>Informasi</h2>
-                        <a href="">
-                            <h4>Testimoni</h4>
-                        </a>
-                        <a href="">
-                            <h4>Blog</h4>
-                        </a>
-                        <a href="">
-                            <h4>Metode Pembayaran</h4>
-                        </a>
-                        <a href="">
-                            <h4>Garanssi Pengiriman</h4>
-                        </a>
-                        <a href="">
-                            <h4>Pusat Bantuan</h4>
-                        </a>
-                    </div>
-                    <div class="col col-3">
-                        <h2>Kontak</h2>
-                        <a href="">
-                            <h4>Email</h4>
-                        </a>
-                        <a href="">
-                            <h4>Lokasi</h4>
-                        </a>
-                        <a href="">
-                            <h4>FAQ</h4>
-                        </a>
-                    </div>
-                    <div class="col col-3">
-                        <h2>Sosial Media</h2>
-                        <h4><span class="mdi mdi-instagram"><a href="">Instagram</a> </span></h4>
-                        <h4><span class="mdi mdi-youtube"><a href="">Youtube</a></span></h4>
-                        <h4><span class="mdi mdi-twitter"><a href="">Twitter</a></span></h4>
-                        <h4><span class="mdi mdi-facebook"><a href="">Facebook</a></span></h4>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col col-3">
+                    <a href="">
+                        <h1>LOGO</h1>
+                    </a>
+                    <a href="">
+                        <h4 class="fs-6">Tageline Perusahaan</h4>
+                    </a>
                 </div>
-                <div class="row">
-                    <div class="col-8">
-                        <h4>Copyright © 2023 Edugot</h4>
-                    </div>
-                    <div class="col-md-auto">
-                        <a href="">
-                            <h4>Keamanan & Privasi</h4>
-                        </a>
-                    </div>
-                    <div class="col col-lg-2">
-                        <a href="">
-                            <h4>Pusat Bantuan</h4>
-                        </a>
-                    </div>
+                <div class="col col-3">
+                    <h2>Informasi</h2>
+                    <a href="">
+                        <h4>Testimoni</h4>
+                    </a>
+                    <a href="">
+                        <h4>Blog</h4>
+                    </a>
+                    <a href="">
+                        <h4>Metode Pembayaran</h4>
+                    </a>
+                    <a href="">
+                        <h4>Garansi Pengiriman</h4>
+                    </a>
+                    <a href="">
+                        <h4>Pusat Bantuan</h4>
+                    </a>
+                </div>
+                <div class="col col-3">
+                    <h2>Kontak</h2>
+                    <a href="">
+                        <h4>Email</h4>
+                    </a>
+                    <a href="">
+                        <h4>Lokasi</h4>
+                    </a>
+                    <a href="">
+                        <h4>FAQ</h4>
+                    </a>
+                </div>
+                <div class="col col-3">
+                    <h2>Sosial Media</h2>
+                    <h4><span class="mdi mdi-instagram"><a href="">Instagram</a> </span></h4>
+                    <h4><span class="mdi mdi-youtube"><a href="">Youtube</a></span></h4>
+                    <h4><span class="mdi mdi-twitter"><a href="">Twitter</a></span></h4>
+                    <h4><span class="mdi mdi-facebook"><a href="">Facebook</a></span></h4>
                 </div>
             </div>
-        </footer>
+            <div class="row">
+                <div class="col-8">
+                    <h4>Copyright © 2023 Edugot</h4>
+                </div>
+                <div class="col-md-auto">
+                    <a href="">
+                        <h4>Keamanan & Privasi</h4>
+                    </a>
+                </div>
+                <div class="col col-lg-2">
+                    <a href="">
+                        <h4>Pusat Bantuan</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="{{ asset('../assets/js/headfoot.js') }}"></script>

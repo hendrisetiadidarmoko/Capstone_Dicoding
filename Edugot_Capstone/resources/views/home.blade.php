@@ -70,14 +70,14 @@
     <section>
         <div class="container">
             <div class="rectangle-img  my-4">
-                <img src="{{ asset('../assets/image/Maggot.png') }}" alt="">
+                <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot">
             </div>
             <h2 clas="titleArticle">Artikel dari Edugot</h2>
             <hr>
             <div class=" row g-4 align-items-center mx-1 justify-content-center">
                 <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
                     <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
                         <div class="card-article card-body ">
                             <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
                             <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
                     <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
                         <div class="card-article card-body ">
                             <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
                             <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
                     <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
                         <div class="card-article card-body ">
                             <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
                             <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
@@ -110,7 +110,7 @@
                 </div>
                 <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
                     <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
                         <div class="card-article card-body ">
                             <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
                             <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
@@ -121,7 +121,7 @@
                 </div>
                 <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
                     <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
                         <div class="card-article card-body ">
                             <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
                             <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah

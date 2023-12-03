@@ -1,8 +1,8 @@
-:root {
-    --primary: #3DA50C;
-    --secondary: #F6F5F5;
-    --third: #FF7629;
-    --fourth: #CECECE;
+:root{
+    --primary:#3DA50C;
+    --secondary:#F6F5F5;
+    --third:#FF7629;
+    --fourth:#CECECE;
     --light: #FFFFFF;
     --dark: #14141F;
 
@@ -21,34 +21,33 @@
 
 }
 
-* {
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
 }
 
-body {
+body{
     font-family: "Poppins", sans-serif;
     background-color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-}
-
-a,
-input,
-button,
-textarea {
-    display: inline-block;
-    min-width: 44px;
-    min-height: 44px;
+    
 }
 
 /* content */
 
-.hero-element {
+.header-admin{
+    background-color: var(--primary) !important;
+}
+
+.title-admin{
+    color: var(--primary) !important;
+}
+
+.hero-element{
     background-image: url('../image/Maggot.png');
     background-size: cover;
     background-position: left;
@@ -58,39 +57,37 @@ textarea {
     height: auto;
     width: 100%;
 }
-
-.hero-element h1 {
+.hero-element h1{
     font-size: 25px;
     color: var(--light);
 }
 
-.hero-element h3 {
+.hero-element h3{
     color: var(--light);
     font-size: 12px;
 }
 
-.hero-element a {
+.hero-element a{
     background-color: var(--primary);
 }
 
-.mdi {
+.mdi{
     font-size: 60px;
 
 }
 
-.content-service {
+.content-service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-service{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container-service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.service {
+.service{
     background-color: var(--primary);
     color: var(--secondary);
     height: 200px;
@@ -99,21 +96,21 @@ textarea {
     padding: 5px;
 }
 
-.service a {
+.service a{
     text-decoration: none;
     color: var(--light);
 }
 
-.service h3 {
+.service h3{
     font-size: x-large;
 }
 
-.service p {
+.service p{
     font-size: small;
 }
 
 .container-img {
-    position: absolute;
+    position:absolute;
     padding: 20px;
     z-index: 4;
     width: 100%;
@@ -132,9 +129,8 @@ textarea {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    position: relative;
-    /* Menambahkan position: relative pada .box */
-
+    position: relative; /* Menambahkan position: relative pada .box */
+    
 }
 
 .box-top {
@@ -147,44 +143,43 @@ textarea {
     background-color: var(--primary);
     width: 75px;
     height: 75px;
-    position: absolute;
-    /* Menggunakan position: absolute */
+    position: absolute; /* Menggunakan position: absolute */
     bottom: 0;
     right: 0;
     z-index: 2;
 }
 
 
-.img-description {
+.img-description{
     height: 180px;
     width: 180px;
 }
 
-.description {
+.description{
     text-align: justify;
 }
 
-.description h2 {
+.description h2{
     text-align: left;
     font-size: 20px;
 }
 
-.description p {
+.description p{
     font-size: 8px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
 }
 
-.description li {
+.description li{
     font-size: 8px;
 }
 
-.card-img-description {
+.card-img-description{
     padding: 100px;
 }
 
-.login {
+.login{
     background-color: var(--third);
     color: var(--light);
     text-align: center;
@@ -200,41 +195,40 @@ textarea {
     box-shadow: 0 0 0 0.2rem var(--third) !important;
 }
 
-.card-login h2 {
+.card-login h2{
+    color: var(--third);
+    font-weight: bold;
+}
+.card-register h2{
     color: var(--third);
     font-weight: bold;
 }
 
-.card-register h2 {
-    color: var(--third);
-    font-weight: bold;
-}
-
-.img-visiMisi img {
+.img-visiMisi img{
     border-radius: 20px 0px 0px 50px;
 }
 
-.team {
+.team{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.card-img-team {
+.card-img-team{
     height: 10rem;
 }
 
-.titleArticle {
+.titleArticle{
     font-size: var(--h-4-m);
 }
 
-.btn-article {
+.btn-article{
     background-color: var(--third);
     color: var(--light);
 }
 
 
-.card-article p {
+.card-article p{
     text-align: justify;
     font-size: 16px;
     font-style: normal;
@@ -242,68 +236,67 @@ textarea {
     line-height: 24px;
 }
 
-.rectangle-img img {
+.rectangle-img img{
     width: 100%;
     border-radius: 20px;
 }
 
-.card-article a {
+.card-article a{
     width: 100%;
 }
-
-.card-article .btn-article:hover {
+.card-article .btn-article:hover{
     border: 1px solid var(--dark);
 }
 
-.service-img-sell {
+.service-img-sell{
     background-color: var(--secondary);
     border-radius: 20px;
 }
 
-.service-img-sell img {
+.service-img-sell img{
     width: 100%;
     height: 100%;
     border-radius: 20px;
 }
 
-.service-img-sell .btn-buy {
+.service-img-sell .btn-buy{
     background-color: var(--third);
     color: var(--light);
 }
 
-.service-img-sell .btn-buy:hover {
+.service-img-sell .btn-buy:hover{
     border: 1px solid var(--dark);
     background-color: var(--light);
     color: var(--dark);
 }
 
-.service-img-sell h4 {
+.service-img-sell h4{
     font-style: italic;
     font-weight: 600;
     line-height: 24px;
 }
 
-.admin-question {
+.admin-question{
     display: flex;
     align-items: end;
 }
 
-.admin-question .btn-buy {
+.admin-question .btn-buy{
     background-color: var(--third);
     color: var(--light);
 }
 
-.admin-question .btn-buy:hover {
+.admin-question .btn-buy:hover{
     border: 1px solid var(--dark);
     background-color: var(--light);
     color: var(--dark);
 }
 
-.buy-container {
+.buy-container{
     background-color: var(--secondary);
 }
 
-.color-service {
+.color-service{
     background-color: var(--light);
     width: 100%;
     margin-left: 0;
@@ -311,128 +304,122 @@ textarea {
     padding: 0;
 }
 
-.color-service h3 {
+.color-service h3{
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.50);
 }
-
-.color-service h2 {
+.color-service h2{
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
 }
 
-.color-service p {
+.color-service p{
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-
+    
 }
-
-.card-servic {
+.card-servic{
     padding: 0;
 }
 
-.btn-service-payment {
+.btn-service-payment{
     margin: 5px 10px;
 }
-
-.btn-service-payment a {
+.btn-service-payment a{
     background-color: var(--primary);
     width: 100%;
     color: white;
 }
 
-.btn-service-payment a:hover {
+.btn-service-payment a:hover{
     background-color: var(--light);
     border: 1px solid var(--dark);
     color: var(--dark);
     width: 100%;
 }
 
-.copy-icon {
+.copy-icon{
     color: var(--third);
 }
 
-.profile-container {
+.profile-container{
     background-color: var(--fourth);
 }
 
-.profile-container h5 {
+.profile-container h5{
     font-weight: 700;
 }
 
-.profile-message {
+.profile-message{
     background-color: var(--secondary);
     border-radius: 20px;
     margin: 1rem;
 }
 
-.profile-message img {
+.profile-message img{
     width: 100%;
     height: 100%;
     border-radius: 20px;
 }
 
-.profile-message h1 {
-    font-size: x-large;
+.profile-message h1{
+    font-size:x-large;
     font-weight: 700;
 }
 
-.profile-message h3 {
+.profile-message h3{
     font-size: large;
     font-weight: 700;
 }
 
-.profile-message p {
+.profile-message p{
     font-size: small;
 }
 
-.profile-message h4 {
+.profile-message h4{
     font-style: italic;
     font-weight: 600;
     line-height: 24px;
     font-size: medium;
 }
 
-.img-profile {
+.img-profile{
     width: 8rem;
     height: 8rem;
 }
 
-.green-service {
+.green-service{
     background-color: var(--primary);
     color: var(--light);
 }
 
-.send-service {
+.send-service{
     background-color: #DEB887;
 }
-
-footer {
+footer{
     margin-top: 3rem;
     background-color: var(--primary);
     padding-top: 2rem;
 }
 
-footer h2 {
+footer h2{
     color: var(--light);
-    font-size: xx-large;
+    font-size:xx-large;
 }
-
-footer h4 {
+footer h4{
     font-size: small;
     color: var(--light);
 }
-
-footer a {
+footer a{
     text-decoration: none;
     color: var(--light);
 }
 
-footer .mdi {
+footer .mdi{
     color: var(--light);
     font-size: small;
 }
