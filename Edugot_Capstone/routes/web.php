@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BuyerController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,36 +20,37 @@ use Illuminate\Support\Facades\Route;
 */
 
 //route admin
-Route::get('/admin', function () {
-    return view('admin.index');
-})->name('admin.index');
-
-Route::resource('admin/product', ProductController::class);
-
-Route::put('/admin/product/stock-update/{product}', [ProductController::class, 'addStock'])->name('product.updateStock');
-Route::get('/admin/product/stock-add/{product}', [ProductController::class, 'showAddStock'])->name('product.showAddStock');
-
-Route::resource('admin/article', ArticleController::class);
-
-Route::resource('admin/order', OrderController::class);
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', function () {
+        return view('admin.index');
+    })->name('admin.index');
+    
+    Route::resource('admin/product', ProductController::class);
+    
+    Route::put('/admin/product/stock-update/{product}', [ProductController::class, 'addStock'])->name('product.updateStock');
+    Route::get('/admin/product/stock-add/{product}', [ProductController::class, 'showAddStock'])->name('product.showAddStock');
+    
+    Route::resource('admin/article', ArticleController::class);
+    
+    Route::resource('admin/order', OrderController::class);
+    Route::post('/admin/order/change-status', [OrderController::class, 'changeOrderStatus'])->name('admin.changestatus');
+});
 
 //route pengguna
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [ArticleController::class, 'homepage'])->name('homepage');
 
 Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/register', function () {
+    return view('registerBuyer');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::post('/registerbuyer', [BuyerController::class, 'registerBuyer'])->name('register');
 
 Route::get('/service-buy', function () {
     return view('servicebuy');
 })->name('service-buy');
+
+Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);

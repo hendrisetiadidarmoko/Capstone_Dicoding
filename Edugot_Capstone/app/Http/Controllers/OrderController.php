@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\OrderStatus;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -82,5 +84,23 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+    }
+
+    public function changeOrderStatus(Request $request){
+        $status = $request->get('status');
+        $order_id = $request->get('order_id');
+
+        $newOStatus = new OrderStatus();
+        $newOStatus->date = date("Y-m-d H:i:s");
+        $newOStatus->status = $status;
+        $newOStatus->order_id = $order_id;
+        $newOStatus->save();
+
+        if(Auth::user()->role=='admin'){
+            return redirect()->route('order.show', $order_id)->with('status', 'Berhasil Mengubah Status Transaksi menjadi '.$status);
+        }
+        else{
+            // ISI KALO CUSTOMER SELESAI GIMANA
+        }
     }
 }

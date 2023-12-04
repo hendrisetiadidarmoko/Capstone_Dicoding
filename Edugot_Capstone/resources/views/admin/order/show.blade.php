@@ -25,18 +25,18 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                    <th>No</th>
-                    <th>Nama Produk</th>
-                    <th>Jumlah</th>
-                    <th>Total</th>
-                </tr>
+                        <th>No</th>
+                        <th>Nama Produk</th>
+                        <th>Jumlah</th>
+                        <th>Total</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
                         <td>{{ $order->product->name }}</td>
                         <td>{{ $order->quantity }}</td>
-                        <td>Rp{{ number_format($order->total, 2, ',','.') }}</td>
+                        <td>Rp{{ number_format($order->total, 2, ',', '.') }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -46,21 +46,40 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                    <th>No</th>
-                    <th>Tanggal</th>
-                    <th>Status</th>
-                </tr>
+                        <th>No</th>
+                        <th>Tanggal</th>
+                        <th>Status</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    @foreach($order->orderStatuss as $key=>$status)
-                    <tr>
-                        <td>{{ $key+1 }}</td>
-                        <td>{{ date("d F Y H:i", strtotime($status->date)) }}</td>
-                        <td>{{ $status->status }}</td>
-                    </tr>
+                    @foreach ($order->orderStatuss as $key => $status)
+                        <tr>
+                            <td>{{ $key + 1 }}</td>
+                            <td>{{ date('d F Y H:i', strtotime($status->date)) }}</td>
+                            <td>{{ $status->status }}</td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
+            @if ($order->orderStatuss[count($order->orderStatuss) - 1]->status == 'Pembayaran Berhasil')
+                <div class="col-12">
+                    <form action="{{ route('admin.changestatus')  }}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-info w-100">Proses Order</button>
+                        <input type="hidden" name="status" value="Order sedang diproses">
+                        <input type="hidden" name="order_id" value="{{ $order->id }}">
+                    </form>
+                </div>
+            @elseif($order->orderStatuss[count($order->orderStatuss) - 1]->status == 'Order sedang diproses')
+                <div class="col-12">
+                    <form action="{{ route('admin.changestatus')  }}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-info w-100">Kirim Order</button>
+                        <input type="hidden" name="status" value="Order sedang dikirim">
+                        <input type="hidden" name="order_id" value="{{ $order->id }}">
+                    </form>
+                </div>
+            @endif
         </div>
     </div>
 @endsection

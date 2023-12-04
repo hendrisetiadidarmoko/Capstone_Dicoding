@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Buyer;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class BuyerController extends Controller
 {
@@ -82,4 +84,35 @@ class BuyerController extends Controller
     {
         //
     }
+
+    public function registerBuyer(Request $request)
+    {
+        $request->validate(
+            [
+                'buyer-name' => 'required',
+                'buyer-address' => 'required',
+                'buyer-number-phone' => 'numeric|required',
+                'buyer-email' => 'required|email|unique:users,email',
+                'buyer-password' => 'required|min:8',
+                'buyer-confirmation-password' => 'required|same:buyer-password',
+            ],
+        );
+
+        User::create([
+            'email' => $request->get('buyer-email'),
+            'password' => Hash::make($request->get('buyer-password')),
+            'role' => 'buyer'
+        ]);
+
+        $userId = User::select('id')->where('email', $request->get('buyer-email'))->first();
+        $newBuyer = new Buyer();
+        $newBuyer->name = $request->get('buyer-name');
+        $newBuyer->address = $request->get('buyer-address');
+        $newBuyer->number_phone = $request->get('buyer-number-phone');
+        $newBuyer->user_id = $userId->id;
+        $newBuyer->save();
+
+        return redirect('login')->with('status', 'Pendaftaran berhasil, silahkan lakukan login.');
+    }
 }
+

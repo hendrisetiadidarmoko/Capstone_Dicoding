@@ -94,7 +94,7 @@
                     {{-- Logout --}}
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Logout</span></li>
                     <li class="menu-item">
-                        <form action="#" method="POST">
+                        <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="btn menu-link btn-logout">
                                 <i class="menu-icon tf-icons bx bx-log-out"></i>

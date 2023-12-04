@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -61,7 +62,7 @@ class ProductController extends Controller
         $data->price = $request->get('product-price');
         $data->stock = 0;
         $data->description = $request->get('product-description');
-        $data->user_id = 1;
+        $data->user_id = Auth::user()->id;
 
         $data->url_img = 'assets/product-images/' . $imgName;
 

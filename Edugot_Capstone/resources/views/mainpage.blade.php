@@ -52,7 +52,17 @@
                 </ul>
             </nav>
             <div class="Authentication">
+                @if(!Auth::user())
                 <a href="{{ url('login') }}" id="loginLink">Masuk</a>
+                @else
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn menu-link btn-logout" id="loginLink">
+                        <i class="menu-icon tf-icons bx bx-log-out"></i>
+                        <div>Logout</div>
+                    </button>
+                </form>
+                @endif
             </div>
         </div>
     </header>

@@ -75,61 +75,22 @@
             <h2 clas="titleArticle">Artikel dari Edugot</h2>
             <hr>
             <div class=" row g-4 align-items-center mx-1 justify-content-center">
-                <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
-                    <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
-                        <div class="card-article card-body ">
-                            <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
-                            <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
-                                menjadi kompos yang berguna bagi tanaman.</p>
-                            <a href="#" class="btn btn-article text-center w-100">Detail Artikel</article></a>
+                @foreach ($articles as $article)
+                    <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
+                        <div class="card">
+                            <img src="{{ asset($article->url_img) }}" class="card-img-top" alt="Ini Artikel">
+                            <div class="card-article card-body ">
+                                <h5 class="card-title fw-semibold">{{ $article->title }}</h5>
+                                @if (strlen($article->content) > 100)
+                                    <p class="card-text">{{ substr($article->content, 0, 100) }}...</p>
+                                @else
+                                    <p class="card-text">{{ $article->content }}</p>
+                                @endif
+                                <a href="#" class="btn btn-article text-center w-100">Detail Artikel</article></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
-                    <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
-                        <div class="card-article card-body ">
-                            <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
-                            <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
-                                menjadi kompos yang berguna bagi tanaman.</p>
-                            <a href="#" class="btn btn-article text-center w-100">Detail Artikel</article></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
-                    <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
-                        <div class="card-article card-body ">
-                            <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
-                            <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
-                                menjadi kompos yang berguna bagi tanaman.</p>
-                            <a href="#" class="btn btn-article text-center w-100">Detail Artikel</article></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
-                    <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
-                        <div class="card-article card-body ">
-                            <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
-                            <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
-                                menjadi kompos yang berguna bagi tanaman.</p>
-                            <a href="#" class="btn btn-article text-center w-100">Detail Artikel</article></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">
-                    <div class="card">
-                        <img src="{{ asset('../assets/image/sampah.png') }}" class="card-img-top" alt="Ini Artikel">
-                        <div class="card-article card-body ">
-                            <h5 class="card-title fw-semibold">Jenis-jenis Sampah dan Cara Pengelolaannya</h5>
-                            <p class="card-text">Sampah organik, seperti sisa makanan, daun, dan sisa tumbuhan, bisa diubah
-                                menjadi kompos yang berguna bagi tanaman.</p>
-                            <a href="#" class="btn btn-article text-center w-100">Detail Artikel</article></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

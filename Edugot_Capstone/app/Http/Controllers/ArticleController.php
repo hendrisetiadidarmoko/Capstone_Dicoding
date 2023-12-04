@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
+    public function homepage(){
+        $articles = Article::orderBy('release_date','desc')->limit(8)->get();
+        return view('home', compact('articles'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -63,7 +68,7 @@ class ArticleController extends Controller
         $data->content = $request->get('article-content');
         $data->release_date = date("Y-m-d H:i:s");
         $data->creator = $request->get('article-creator');
-        $data->user_id = 1;
+        $data->user_id = Auth::user()->id;
 
         $data->url_img = 'assets/article-images/' . $imgName;
 
