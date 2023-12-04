@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,13 +28,7 @@ Route::get('/admin/product/stock-add/{product}', [ProductController::class, 'sho
 
 Route::resource('admin/article', ArticleController::class);
 
-Route::get('/admin/article', function () {
-    return view('admin.article');
-})->name('admin.article');
-
-Route::get('/admin/order', function () {
-    return view('admin.order');
-})->name('admin.order');
+Route::resource('admin/order', OrderController::class);
 
 //route pengguna
 Route::get('/', function () {

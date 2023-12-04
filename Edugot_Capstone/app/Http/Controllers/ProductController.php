@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = Product::all();
+        $products = Product::all();
         return view('admin.product.index', compact('products'));
     }
 
@@ -47,7 +47,7 @@ class ProductController extends Controller
             ['product-url.required' => 'Upload gambar produk.'],
             ['product-name.required' => 'Nama produk tidak boleh kosong.'],
             ['product-price.required' => 'Harga produk tidak boleh kosong.'],
-            ['product-description' => 'Deskripsi produk tidak boleh kosong'],
+            ['product-description.required' => 'Deskripsi produk tidak boleh kosong'],
         );
 
         //upload gambar
@@ -61,10 +61,10 @@ class ProductController extends Controller
         $data->price = $request->get('product-price');
         $data->stock = 0;
         $data->description = $request->get('product-description');
+        $data->user_id = 1;
 
-        $data->url_img = 'assets/product-images' . $imgName;
+        $data->url_img = 'assets/product-images/' . $imgName;
 
-        $data->type_id = $request->get('typesproduct');
         $data->save();
 
         return redirect()->route('product.index')->with('status', 'Berhasil menambahkan data produk baru.');
@@ -103,10 +103,12 @@ class ProductController extends Controller
     {
         $request->validate(
             [
+                'product-url' => 'mimes:jpg,png|required|file',
                 'product-name' => 'required',
                 'product-price' => 'required|numeric',
                 'product-description' => 'required',
             ],
+            ['product-url.mimes:jpg,png' => 'Format gambar yang diterima hanya .jpg dan .png.'],
             ['product-name.required' => 'Nama produk tidak boleh kosong.'],
             ['product-price.required' => 'Harga produk tidak boleh kosong.'],
             ['product-description' => 'Deskripsi produk tidak boleh kosong'],
@@ -118,8 +120,12 @@ class ProductController extends Controller
             $imgName = $request->get('product-name') . '.' . $file->getClientOriginalExtension();
             $file->move($imgFolder, $imgName);
 
-            $product->url_img = 'assets/product-images' . $imgName;
+            $product->url_img = 'assets/product-images/' . $imgName;
         }
+
+        $product->name = $request->get('product-name');
+        $product->price = $request->get('product-price');
+        $product->description = $request->get('product-description');
 
         $product->save();
 

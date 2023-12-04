@@ -11,7 +11,13 @@ class Product extends Model
     // use HasFactory, SoftDeletes;
     use HasFactory;
 
-    public function product(){
+    public $timestamps = false;
+
+    public function orders(){
         return $this->hasMany(Order::class, 'product_id');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

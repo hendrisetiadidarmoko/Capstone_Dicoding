@@ -14,7 +14,7 @@
             @csrf
             <div class="form-group">
                 <label for="gambar">Foto Produk</label>
-                <input type="file" accept="application/images" name="product-url" id="productUrl" class="form-control-file"
+                <input type="file" accept="application/images" name="product-url" id="productUrl" class="form-control"
                     required>
             </div><br>
             <div class="form-group">

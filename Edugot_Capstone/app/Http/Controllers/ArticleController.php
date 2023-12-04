@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::all();
+        return view('admin.article.index', compact('articles'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.article.create');
     }
 
     /**
@@ -35,7 +36,40 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'article-url' => 'mimes:jpg,png|required|file',
+                'article-title' => 'required',
+                'article-content' => 'required',
+                'article-content' => 'max:1000',
+                'article-creator' => 'required'
+            ],
+            ['article-url.mimes:jpg,png' => 'Format gambar yang diterima hanya .jpg dan .png.'],
+            ['article-url.required' => 'Upload gambar artikel.'],
+            ['article-title.required' => 'Judul artikel tidak boleh kosong.'],
+            ['article-content.required' => 'Masukkan isi artikel.'],
+            ['article-content.max:1000' => 'Jumlah maksimal karakter adalah 1000'],
+            ['article-creator.required' => 'Nama pengarang tidak boleh kosong.'],
+        );
+
+        //upload gambar
+        $file = $request->file('article-url');
+        $imgFolder = 'assets/article-images';
+        $imgName = $request->get('article-title') . '.' . $file->getClientOriginalExtension();
+        $file->move($imgFolder, $imgName);
+
+        $data = new Article();
+        $data->title = $request->get('article-title');
+        $data->content = $request->get('article-content');
+        $data->release_date = date("Y-m-d H:i:s");
+        $data->creator = $request->get('article-creator');
+        $data->user_id = 1;
+
+        $data->url_img = 'assets/article-images/' . $imgName;
+
+        $data->save();
+
+        return redirect()->route('article.index')->with('status', 'Berhasil menambahkan data artikel baru.');
     }
 
     /**
@@ -46,7 +80,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('admin.article.show', compact('article'));
     }
 
     /**
@@ -57,7 +91,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('admin.article.edit', compact('article'));
     }
 
     /**
@@ -69,7 +103,38 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $request->validate(
+            [
+                'article-url' => 'mimes:jpg,png|required|file',
+                'article-title' => 'required',
+                'article-content' => 'required',
+                'article-content' => 'max:1000',
+                'article-creator' => 'required'
+            ],
+            ['article-url.mimes:jpg,png' => 'Format gambar yang diterima hanya .jpg dan .png.'],
+            ['article-url.required' => 'Upload gambar artikel.'],
+            ['article-title.required' => 'Judul artikel tidak boleh kosong.'],
+            ['article-content.required' => 'Masukkan isi artikel.'],
+            ['article-content.max:1000' => 'Jumlah maksimal karakter adalah 1000'],
+            ['article-creator.required' => 'Nama pengarang tidak boleh kosong.'],
+        );
+
+        if ($request->file('article-url')) {
+            $file = $request->file('article-url');
+            $imgFolder = 'assets/article-images';
+            $imgName = $request->get('article-title') . '.' . $file->getClientOriginalExtension();
+            $file->move($imgFolder, $imgName);
+
+            $article->url_img = 'assets/article-images/' . $imgName;
+        }
+
+        $article->title = $request->get('article-title');
+        $article->content = $request->get('article-content');
+        $article->creator = $request->get('article-creator');
+
+        $article->save();
+
+        return redirect()->route('article.index')->with('status', 'Data artikel berhasil diubah.');
     }
 
     /**
@@ -80,6 +145,13 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        try {
+            $article->delete();
+            return redirect()->route('article.index')->with('status', 'Data berhasil dihapus.');
+            // dd($objCategory);
+        } catch (\PDOException $ex) {
+            $message = "Gagal untuk menghapus data, pastikan data yang dihapus tidak berelasi dengan data dari kolom lain.";
+            return redirect()->route('article.index')->with('status', $message);
+        }
     }
 }

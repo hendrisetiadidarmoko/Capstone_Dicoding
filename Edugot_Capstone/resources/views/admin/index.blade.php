@@ -85,7 +85,7 @@
 
                     {{-- Order --}}
                     <li class="menu-item {{ request()->is('order') ? ' active' : '' }}">
-                        <a href="{{ route('admin.order') }}" class="menu-link">
+                        <a href="{{ route('order.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-notepad"></i>
                             <div>Penjualan</div>
                         </a>

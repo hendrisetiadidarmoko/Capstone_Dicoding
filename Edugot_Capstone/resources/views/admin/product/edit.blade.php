@@ -34,8 +34,8 @@
                     placeholder="Masukkan deskripsi produk Anda" required>{{ $product->description }}</textarea>
             </div><br>
             <div class="row">
-                <div class="col-md-12"><button type="submit" class="btn btn-info btn-fill pull-right">Tambah
-                        Produk</button>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-info btn-fill pull-right">Ubah Produk</button>
                 </div>
             </div>
             <div class="clearfix"></div>
