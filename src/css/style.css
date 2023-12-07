@@ -61,8 +61,18 @@ body{
     font-size: 12px;
 }
 
-.hero-element a{
+.btn-home-buy{
+    height: 2.4rem;
     background-color: var(--primary);
+}
+
+.btn-home-buy:hover{
+    height: 2.4rem;
+    background-color: var(--primary);
+}
+
+.hero-element a{
+    color: var(--light);
 }
 
 .mdi{
@@ -250,7 +260,7 @@ body{
 
 .rectangle-img img{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .card-article a{
@@ -509,13 +519,18 @@ body{
     background-color: var(--third);
     width: 5rem;
     height: 1.7rem;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 8px;
     cursor: pointer;
+    display: block;
 }
 
 .btn-link a{
-    font-size: 8px;
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.btn-link a:hover, .btn-link a:link{
     color: var(--secondary);
     cursor: pointer;
 }
@@ -564,7 +579,7 @@ footer{
 
 footer h2{
     color: var(--secondary);
-    font-size:xx-large;
+    font-size:x-large;
 }
 footer h4{
     font-size: small;

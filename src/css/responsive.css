@@ -1,4 +1,23 @@
+@media (max-width: 400px) {
+    .trapesium p {
+        font-size: 6px;
+    }
 
+    .btn-link{
+        width: 4rem;
+        height: 1.3rem;
+    }
+
+    .btn-link a{
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 700px) {
+    .btn-link a{
+        font-size: 8px;
+    }
+}
 @media (min-width: 768px) {
     .hero-element h1{
         font-size: 35px;
@@ -53,7 +72,7 @@
     }
 
     .trapesium p{
-        font-size: medium;
+        font-size: 14px;
     }
 
     .product{
@@ -66,6 +85,7 @@
 
     .btn-link{
         width: 7rem;
+        height: 2rem;
     }
 
     .btn-link a{
@@ -120,8 +140,17 @@
         width: 80px;
         height: 80px;
     }
+
+    .btn-link{
+        height: 2rem;
+    }
     
+    .trapesium p{
+        font-size: 16px;
+    }
 }
+
+
 
 @media (min-width: 1200px) {
     .descripsi h2{
