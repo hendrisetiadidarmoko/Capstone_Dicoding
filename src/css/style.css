@@ -249,6 +249,11 @@ body{
     color: var(--light);
 }
 
+.card-title-artikel{
+    width: 100%;
+    background-color: var(--primary);
+}
+
 
 .card-article p{
     text-align: justify;
@@ -325,6 +330,23 @@ body{
 
 .buy-container h2{
     color: var(--primary);
+}
+
+
+.buy-container option:active{
+    background-color: var(--primary);
+}
+
+
+
+.buy-container .form-control:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 0.2rem var(--primary) !important;
+}
+
+.buy-container .form-select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 0.2rem var(--primary) !important;
 }
 
 .color-service{
@@ -556,6 +578,17 @@ body{
 
 .link-footer{
     height: 30px;
+}
+
+.detail-home a{
+    color: #FF7629;
+    font-size: medium;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.detail-home h2{
+    font-weight: 700;
 }
 
 a, button{
