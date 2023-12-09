@@ -12,6 +12,10 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
@@ -75,8 +79,30 @@
         </div>
     </section>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
-    <script src="../js/map.js"></script>
+    <script>
+        var locations = [
+        ["LOCATION_1", 11.8166, 122.0942],
+        ["LOCATION_2", 11.9804, 121.9189],
+        ["LOCATION_3", 10.7202, 122.5621],
+        ["LOCATION_4", 11.3889, 122.6277],
+        ["LOCATION_5", 10.5929, 122.6325]
+        ];
+
+        var map = L.map('map').setView([-7.411098489278937, 109.22631444005974], 8);
+        mapLink =
+        '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; ' + mapLink + ' Contributors',
+            maxZoom: 18,
+        }).addTo(map);
+
+        for (var i = 0; i < locations.length; i++) {
+        marker = new L.marker([locations[i][1], locations[i][2]])
+            .bindPopup(locations[i][0])
+            .addTo(map);
+        }
+    </script>
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
