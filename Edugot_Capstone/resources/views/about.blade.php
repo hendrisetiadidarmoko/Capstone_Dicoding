@@ -1,34 +1,7 @@
 @extends('mainpage')
 @section('content')
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand">Navbar</a>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
     <section>
-        <div class="container mt-5 ">
-            <div class="row">
-                <div class="col col-4 ">
-                    <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot" class="rounded w-100 h-100">
-                </div>
-                <div class="col col-8 descripsi">
-                    <h2 class="fw-bold">Apa itu Edugot?</h2>
-                    <p class="lh-sm text-justify">Maggot adalah larva dari lalat yang berkembang dari telur lalat. Maggot
-                        memiliki peran penting dalam menguraikan bahan organik, termasuk sampah, dan dapat digunakan dalam
-                        berbagai aplikasi positif. Lalat penghasil maggot umumnya termasuk lalat black soldier fly (Hermetia
-                        illucens) dan beberapa jenis lalat lainnya.
-
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-5 ">
+        <div class="container mt-4 ">
             <h2 class="fw-bold text-center mb-4">Visi & Misi</h2>
             <div class="row">
                 <div class="col col-6 descripsi">
@@ -70,31 +43,46 @@
                     </ol>
                 </div>
                 <div class="col col-6 img-visiMisi">
-                    <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot" class="w-100 h-100">
+                    <img src="{{ asset('../assets/image/logo.jpg') }}" alt="logo" class="w-100 h-100">
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container-fluid mt-5">
+        <div class="container mt-4">
             <h2 class="text-center fw-bold">Product Kami</h2>
-            <div class="product w-100" style="background-color: aqua;">
-                <div class="col col-5"></div>
-                <div class="col col-7"></div>
+            <div class="product w-100 d-flex position-relative" style="background-color: aqua;">
+                <div class='trapesium position-absolute text-center'>
+                    <div class="p-1 d-flex flex-column align-items-center">
+                        <p class="px-2">"Optimalkan pengurangan sampah organik dengan memanfaatkan larva lalat serta
+                            menghasilkan nilai tambah ekonomi."</p>
+                        <div class="w-100 d-flex justify-content-center">
+                            <div class="btn-link ">
+                                <a href="" class="btn p-1 fw-bold ">Beli Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="inverted-trapesium d-flex justify-content-end">
+                    <img src="{{ asset('../assets/image/magoots.png') }}" alt="magot">
+                </div>
             </div>
         </div>
     </section>
 
     <section class="mb-5">
-        <div class=" container mt-5 text-center">
-            <h2 class=" fw-bold mb-5">Team Kami</h2>
+        <div class=" container mt-4 text-center">
+            <h2 class=" fw-bold mb-4">Team Kami</h2>
             <div class="team">
                 <div class=" row g-5 align-items-center mx-1 justify-content-center">
                     <div class="col-12 col-xl-4 col-md-6 col-sm-10">
                         <div class="card rounded bg-body-secondary equal-height-card">
-                            <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot" class="card-img-top  pt-3 px-5" alt="..."
+                            <img src="{{ asset('../assets/image/logo.jpg') }}" class="card-img-top  pt-3 px-5" alt="..."
                                 style="height: 20rem;">
-                            <div class="card-body">
+                            <div class="card-body team-card">
                                 <h3 class="card-title fw-bold">Annastia Reza Dzulhaj</h3>
                                 <p class="card-text">Project Manager</p>
                             </div>
@@ -102,7 +90,7 @@
                     </div>
                     <div class="col-12 col-xl-4 col-md-6 col-sm-10">
                         <div class="card rounded bg-body-secondary equal-height-card">
-                            <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot" class="card-img-top  pt-3 px-5" alt="..."
+                            <img src="{{ asset('../assets/image/logo.jpg') }}" class="card-img-top  pt-3 px-5" alt="..."
                                 style="height: 20rem;">
                             <div class="card-body">
                                 <h3 class="card-title fw-bold">Hendri Setiadi Darmoko</h3>
@@ -112,7 +100,7 @@
                     </div>
                     <div class="col-12 col-xl-4 col-md-6 col-sm-10">
                         <div class="card rounded bg-body-secondary equal-height-card">
-                            <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot" class="card-img-top  pt-3 px-5" alt="..."
+                            <img src="{{ asset('../assets/image/logo.jpg') }}" class="card-img-top  pt-3 px-5" alt="..."
                                 style="height: 20rem;">
                             <div class="card-body">
                                 <h3 class="card-title fw-bold">Khoirul Gunawan</h3>
@@ -122,7 +110,7 @@
                     </div>
                     <div class="col-12 col-xl-4  col-md-6 col-sm-10">
                         <div class="card rounded bg-body-secondary equal-height-card">
-                            <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot" class="card-img-top  pt-3 px-5" alt="..."
+                            <img src="{{ asset('../assets/image/logo.jpg') }}" class="card-img-top  pt-3 px-5" alt="..."
                                 style="height: 20rem;">
                             <div class="card-body">
                                 <h3 class="card-title fw-bold">Vincentius Christian</h3>
@@ -132,7 +120,7 @@
                     </div>
                     <div class="col-12 col-xl-4 col-md-6 col-sm-10">
                         <div class="card rounded bg-body-secondary equal-height-card">
-                            <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot" class="card-img-team card-img-top  pt-3 px-5" alt="..."
+                            <img src="{{ asset('../assets/image/logo.jpg') }} " class="card-img-team card-img-top  pt-3 px-5" alt="..."
                                 style="height: 20rem;">
                             <div class="card-body">
                                 <h3 class="card-title fw-bold">Landewank FF</h3>
@@ -142,6 +130,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 @endsection

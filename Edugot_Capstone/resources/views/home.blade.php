@@ -44,36 +44,39 @@
 
     <section class="description-content">
         <div class="container mt-5 ">
-            <div class="row gx-5 ">
+            <div class="row gx-3 ">
                 <div class="col ">
-                    <div class="box d-flex">
+                    <div class="box box-img d-flex ">
                         <div class="container-img">
-                            <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot" class="image">
+                            <img src="{{ asset('../assets/image/Leading-Maggot-Farmer.jpg') }}" alt="Maggot"
+                                class="image">
                         </div>
                         <div class="box-top"></div>
                         <div class="box-bottom"></div>
                     </div>
                 </div>
                 <div class="description col">
-                    <h2>Lorem ipsum dolor sit amet Vel proin nunc eget at in amet.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur. Volutpat felis varius venenatis morbi lectus
-                        vestibulum. Sem sit lectus sit turpis scelerisque sed pretium amet. Nunc feugiat orci sit in
-                        ut elementum.
-                        Nisi varius massa volutpat eu viverra amet. Arcu mattis fames ornare urna mauris eu. Sapien
-                        ut risus blandit duis adipiscing auctor tellus tincidunt. Ac sollicitudin mi sapien accumsan
-                        nunc id non nisl aenean. Integer nunc mi est tristique.</p>
+                    <h2>KENAPA HARUS MAGGOT?</h2>
+                    <p>Karna maggot adalah solusi terbaik untuk mengurangi sampah organik dan maggot dalam pengelolaan
+                        sampah organik juga menghadirkan manfaat ekologis dan ekonomis. Larva lalat dapat menghasilkan pupa
+                        yang kaya nutrisi, dapat digunakan sebagai pakan ternak atau sumber protein alternatif. Dengan
+                        memanfaatkan maggot, kita tidak hanya mengurangi sampah organik tetapi juga menciptakan peluang
+                        untuk mendaur ulang sumber daya dan menghasilkan produk bernilai tambah. </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="my-5">
         <div class="container">
-            <div class="rectangle-img  my-4">
-                <img src="{{ asset('../assets/image/Maggot.png') }}" alt="Ini Maggot">
+            <div class=" row d-flex align-items-center mb-3 detail-home">
+                <div class="col-8 col-xl-6 col-sm-8">
+                    <h2 clas="titleArticle fw-bold ">Artikel Terbaru dari Edugot</h2>
+                </div>
+                <div class="col-4 col-xl-6  col-md-6 col-sm-4 col d-flex justify-content-end">
+                    <a href="" class="text-decoration-none">Lihat Selengkapnya</a>
+                </div>
             </div>
-            <h2 clas="titleArticle">Artikel dari Edugot</h2>
-            <hr>
             <div class=" row g-4 align-items-center mx-1 justify-content-center">
                 @foreach ($articles as $article)
                     <div class="col-12 col-xl-3 col-md-6 col-sm-10" style="width: 18rem;">

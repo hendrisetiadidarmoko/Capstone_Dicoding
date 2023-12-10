@@ -1,4 +1,23 @@
+@media (max-width: 400px) {
+    .trapesium p {
+        font-size: 6px;
+    }
 
+    .btn-link{
+        width: 4rem;
+        height: 1.3rem;
+    }
+
+    .btn-link a{
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 700px) {
+    .btn-link a{
+        font-size: 8px;
+    }
+}
 @media (min-width: 768px) {
     .hero-element h1{
         font-size: 35px;
@@ -16,15 +35,16 @@
     .container-service{
         flex-direction: row;
     }
-    .description h2{
+    .descripsi h2{
         font-size: 25px;
     }
     
-    .description p{
+    .descripsi p{
         font-size: 16px;
+        line-height: 24px;
     }
 
-    .description li{
+    .descripsi li{
     font-size: 16px;
     
     }
@@ -32,6 +52,45 @@
         height: 8rem;
     }
 
+    .box-img{
+        height: 20rem;
+    }
+    
+    .box-top {
+        width: 60px;
+        height: 60px;
+    }
+
+    .box-bottom {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service{
+        height: 230px;
+        width: 200px;
+    }
+
+    .trapesium p{
+        font-size: 14px;
+    }
+
+    .product{
+        height: 8rem;
+    }
+
+    .trapesium{
+        border-bottom: 8rem solid var(--primary);
+    }
+
+    .btn-link{
+        width: 7rem;
+        height: 2rem;
+    }
+
+    .btn-link a{
+        font-size: small;
+    }
 }
 @media (max-width: 767px) {
     .card .img-wrapper {
@@ -56,22 +115,56 @@
         width: 300px;
         padding: 10px;
         align-items: center;
+        height: 220px;
     }
     .rectangle-img img{
         height: 10rem;
     }
+
+    .img-profile img{
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .img-profile label{
+        width: 12rem;
+    }
+
+    
+    .box-top {
+        width: 80px;
+        height: 80px;
+    }
+
+    .box-bottom {
+        width: 80px;
+        height: 80px;
+    }
+
+    .btn-link{
+        height: 2rem;
+    }
+    
+    .trapesium p{
+        font-size: 16px;
+    }
+    .btn-home-buy{
+        height: 3rem;
+    }
 }
 
+
+
 @media (min-width: 1200px) {
-    .description h2{
+    .descripsi h2{
         font-size: 35px;
     }
     
-    .description p{
+    .descripsi p{
         font-size: 16px;
         
     }
-    .description li{
+    .descripsi li{
         font-size: 16px;
     }
 
@@ -83,5 +176,14 @@
     }
     .card-img-team{
         height: 20rem;
+    }
+
+    .img-profile img{
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .img-profile label{
+        width: 15rem;
     }
 }
