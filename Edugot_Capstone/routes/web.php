@@ -51,6 +51,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/article/{article}', [ArticleController::class, 'showDetail'])->name('article.showDetail');
+
 Route::get('/register', function () {
     return view('registerBuyer');
 });

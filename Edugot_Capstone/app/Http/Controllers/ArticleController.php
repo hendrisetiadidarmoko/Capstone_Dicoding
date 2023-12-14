@@ -159,4 +159,9 @@ class ArticleController extends Controller
             return redirect()->route('article.index')->with('status', $message);
         }
     }
+
+    public function showDetail(Article $article)
+    {
+        return view('articledetail', compact('article'));
+    }
 }

@@ -89,7 +89,8 @@
                                 @else
                                     <p class="card-text">{{ $article->content }}</p>
                                 @endif
-                                <a href="#" class="btn btn-article text-center w-100">Detail Artikel</article></a>
+                                <a href="{{ route('article.showDetail', $article->id) }}" class="btn btn-article text-center w-100">Detail
+                                    Artikel</article></a>
                             </div>
                         </div>
                     </div>

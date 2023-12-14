@@ -3,59 +3,62 @@
         font-size: 6px;
     }
 
-    .btn-link{
+    .btn-link {
         width: 4rem;
         height: 1.3rem;
     }
 
-    .btn-link a{
+    .btn-link a {
         font-size: 7px;
     }
 }
 
 @media (max-width: 700px) {
-    .btn-link a{
+    .btn-link a {
         font-size: 8px;
     }
 }
+
 @media (min-width: 768px) {
-    .hero-element h1{
+    .hero-element h1 {
         font-size: 35px;
     }
 
-    .hero-element h3{
+    .hero-element h3 {
         font-size: 15px;
         padding: 20px;
     }
 
-    .hero-element a{
+    .hero-element a {
         font-size: 15px;
     }
 
-    .container-service{
+    .container-service {
         flex-direction: row;
     }
-    .descripsi h2{
+
+    .description h2 {
         font-size: 25px;
     }
-    
-    .descripsi p{
+
+    .description p {
         font-size: 16px;
         line-height: 24px;
     }
 
-    .descripsi li{
-    font-size: 16px;
-    
+    .description li {
+        font-size: 16px;
+
     }
-    .rectangle-img img{
+
+    .rectangle-img img {
         height: 8rem;
     }
 
-    .box-img{
+    .box-img {
         height: 20rem;
     }
-    
+
     .box-top {
         width: 60px;
         height: 60px;
@@ -66,32 +69,33 @@
         height: 60px;
     }
 
-    .service{
+    .service {
         height: 230px;
         width: 200px;
     }
 
-    .trapesium p{
+    .trapesium p {
         font-size: 14px;
     }
 
-    .product{
+    .product {
         height: 8rem;
     }
 
-    .trapesium{
+    .trapesium {
         border-bottom: 8rem solid var(--primary);
     }
 
-    .btn-link{
+    .btn-link {
         width: 7rem;
         height: 2rem;
     }
 
-    .btn-link a{
+    .btn-link a {
         font-size: small;
     }
 }
+
 @media (max-width: 767px) {
     .card .img-wrapper {
         height: 17em;
@@ -99,38 +103,40 @@
 }
 
 @media (min-width: 1000px) {
-    .hero-element h1{
+    .hero-element h1 {
         font-size: 70px;
     }
 
-    .hero-element h3{
+    .hero-element h3 {
         font-size: 25px;
         padding: 20px;
     }
 
-    .hero-element a{
+    .hero-element a {
         font-size: 25px;
     }
-    .service{
+
+    .service {
         width: 300px;
         padding: 10px;
         align-items: center;
         height: 220px;
     }
-    .rectangle-img img{
+
+    .rectangle-img img {
         height: 10rem;
     }
 
-    .img-profile img{
+    .img-profile img {
         width: 12rem;
         height: 12rem;
     }
-    
-    .img-profile label{
+
+    .img-profile label {
         width: 12rem;
     }
 
-    
+
     .box-top {
         width: 80px;
         height: 80px;
@@ -141,14 +147,15 @@
         height: 80px;
     }
 
-    .btn-link{
+    .btn-link {
         height: 2rem;
     }
-    
-    .trapesium p{
+
+    .trapesium p {
         font-size: 16px;
     }
-    .btn-home-buy{
+
+    .btn-home-buy {
         height: 3rem;
     }
 }
@@ -156,34 +163,36 @@
 
 
 @media (min-width: 1200px) {
-    .descripsi h2{
+    .description h2 {
         font-size: 35px;
     }
-    
-    .descripsi p{
+
+    .description p {
         font-size: 16px;
-        
+
     }
-    .descripsi li{
+
+    .description li {
         font-size: 16px;
     }
 
-    .service{
+    .service {
         width: 300px;
-        
+
         padding: 10px;
         align-items: center;
     }
-    .card-img-team{
+
+    .card-img-team {
         height: 20rem;
     }
 
-    .img-profile img{
+    .img-profile img {
         width: 15rem;
         height: 15rem;
     }
-    
-    .img-profile label{
+
+    .img-profile label {
         width: 15rem;
     }
 }

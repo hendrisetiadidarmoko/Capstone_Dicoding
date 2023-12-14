@@ -40,7 +40,7 @@ body{
 /* content */
 
 .hero-element{
-    background-image: url('../image/Maggot.png');
+    background-image: url('../img/Maggot.png');
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
