@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Buyer;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class BuyerController extends Controller
@@ -114,5 +115,10 @@ class BuyerController extends Controller
 
         return redirect('login')->with('status', 'Pendaftaran berhasil, silahkan lakukan login.');
     }
-}
 
+    public function showProfile()
+    {
+        $buyer = Auth::user()->buyer;
+        return view('profile', compact('buyer'));
+    }
+}

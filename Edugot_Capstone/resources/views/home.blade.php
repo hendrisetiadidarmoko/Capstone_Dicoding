@@ -7,7 +7,7 @@
                 <h3>Maggot, atau larva lalat Black Soldier Fly (BSF), merupakan salah satu solusi untuk pengelolaan
                     sampah organik. Maggot memiliki kemampuan untuk mengurai sampah organik dengan cepat dan
                     efisien.</h3>
-                <a href="" class="btn btn-secondary btn-lg">Beli Sekarang</a>
+                <a href="{{ route('checkout') }}" class="btn btn-secondary btn-lg">Beli Sekarang</a>
             </div>
         </div>
     </section>
@@ -16,7 +16,7 @@
             <h2 class="text-center mb-3">Layanan yang Kami Sediakan</h2>
             <div class="container-service text-center">
                 <div class="service rounded card ">
-                    <a href="{{ route('service-buy') }}">
+                    <a href="{{ route('checkout') }}">
                         <i class="mdi mdi-store"></i>
                         <h3>Pembelian</h3>
                         <p>Untuk memudahkan masyarakat dalam memperoleh maggot secara online</p>

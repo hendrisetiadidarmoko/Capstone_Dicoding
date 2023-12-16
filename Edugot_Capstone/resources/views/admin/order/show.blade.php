@@ -61,18 +61,25 @@
                     @endforeach
                 </tbody>
             </table>
-            @if ($order->orderStatuss[count($order->orderStatuss) - 1]->status == 'Pembayaran Berhasil')
+            @if ($order->orderStatuss[count($order->orderStatuss) - 1]->status == 'Konfirmasi Pembayaran')
                 <div class="col-12">
-                    <form action="{{ route('admin.changestatus')  }}" method="post">
+                    <form action="{{ route('admin.changestatus') }}" method="post">
                         @csrf
                         <button type="submit" class="btn btn-info w-100">Proses Order</button>
                         <input type="hidden" name="status" value="Order sedang diproses">
                         <input type="hidden" name="order_id" value="{{ $order->id }}">
                     </form>
                 </div>
+                <div class="col-12">
+                    <form action="{{ route('admin.cancelorder') }}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-danger w-100">Batalkan Order</button>
+                        <input type="hidden" name="order_id" value="{{ $order->id }}">
+                    </form>
+                </div>
             @elseif($order->orderStatuss[count($order->orderStatuss) - 1]->status == 'Order sedang diproses')
                 <div class="col-12">
-                    <form action="{{ route('admin.changestatus')  }}" method="post">
+                    <form action="{{ route('admin.changestatus') }}" method="post">
                         @csrf
                         <button type="submit" class="btn btn-info w-100">Kirim Order</button>
                         <input type="hidden" name="status" value="Order sedang dikirim">
