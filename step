@@ -1,0 +1,9 @@
+$ docker compose build
+$ docker compose up -d
+$ docker-compose exec  php /bin/bash
+$ composer install / update
+$ cp .env.example .env
+$ php artisan key:generate
+$ php artisan storage:link
+$ php artisan cache:clear 
+$
