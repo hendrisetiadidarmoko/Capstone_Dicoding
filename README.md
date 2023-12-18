@@ -43,7 +43,7 @@
         DB_DATABASE=edugot_db
         DB_USERNAME=root
         DB_PASSWORD=admin
-       
+        ```
     3.4 ```php artisan key:generate```
     3.5 ```php artisan storage:link```
     3.5 ```php artisan cache:clear```
