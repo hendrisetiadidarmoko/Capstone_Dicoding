@@ -67,6 +67,8 @@
 ## Repositori DockerHub
  https://hub.docker.com/repository/docker/lffdevops/capstone_dicoding
 
+
 ## Hasilnya
+Berhasil menjalankan aplikasi di dalam kontainer
 <img src="/src/public/assets/article-images/berhasil jalan di dalam kontainer.png">
 
