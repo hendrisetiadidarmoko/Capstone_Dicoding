@@ -34,6 +34,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::resource('admin/order', OrderController::class);
     Route::post('/admin/order/change-status', [OrderController::class, 'changeOrderStatus'])->name('admin.changestatus');
+    Route::post('/admin/order/cancel-order', [OrderController::class, 'cancelOrder'])->name('admin.cancelorder');
 });
 
 //route pengguna
@@ -59,8 +60,11 @@ Route::get('/register', function () {
 
 Route::post('/registerbuyer', [BuyerController::class, 'registerBuyer'])->name('register');
 
-Route::get('/service-buy', function () {
-    return view('servicebuy');
-})->name('service-buy');
+Route::get('/service-buy', [OrderController::class, 'showCheckout'])->name('checkout');
+Route::post('/service-pay', [OrderController::class, 'showPayment'])->name('payment');
+Route::post('/', [OrderController::class, 'orderCreate'])->name('home');
+
+Route::get('/profile', [BuyerController::class, 'showProfile'])->name('profile');
+Route::get('/history-order', [OrderController::class, 'showHistoryOrder'])->name('showHistoryOrder');
 
 Auth::routes(['register' => false, 'reset' => false, 'verify' => false]);
