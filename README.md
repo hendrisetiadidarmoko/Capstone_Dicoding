@@ -3,7 +3,6 @@
 ## Instalasi
 1. Docker Engine
 
-<<<<<<< HEAD
 ## Struktur Folder
  ├── Deployment
     ├── src
@@ -15,7 +14,6 @@
     ├── nginx
 Dockerfile
 docker-compose.yml
-=======
 ## <b>Struktur Folder</b>
 <pre>
 |── Deployment
@@ -30,7 +28,6 @@ docker-compose.yml
 |── Dockerfile
 └── docker-compose.yml
 </pre>
->>>>>>> c307e50913589cb00dee589b95ed8864846fd0d7
 
 ## Cara Penggunaan
 
@@ -56,7 +53,6 @@ docker-compose.yml
         DB_DATABASE=edugot_db
         DB_USERNAME=root
         DB_PASSWORD=admin
-<<<<<<< HEAD
        
     3.4 php artisan key:generate
     3.5 php artisan storage:link
@@ -64,7 +60,6 @@ docker-compose.yml
 4. Import database 
 5. untuk menjalankan website pada browser:
        http://localhost:1011
-=======
         ```
    
     3.3. Jalankan:
@@ -89,4 +84,3 @@ docker-compose.yml
 
 
 
->>>>>>> c307e50913589cb00dee589b95ed8864846fd0d7
