@@ -33,7 +33,7 @@ docker-compose.yml
 
 1. `docker compose build`
 2. `docker compose up -d`
-3. 
+3.  'Masuk kontainer php'
     ```bash
     docker-compose exec php /bin/bash
     ```
@@ -46,7 +46,7 @@ docker-compose.yml
         ```
 
         Ubah nilai-nilai berikut dalam file `.env`:
-        ```dotenv
+        ```env
         DB_CONNECTION=mysql
         DB_HOST=db
         DB_PORT=3306
@@ -60,22 +60,6 @@ docker-compose.yml
 4. Import database 
 5. untuk menjalankan website pada browser:
        http://localhost:1011
-        ```
-   
-    3.3. Jalankan:
-        ```bash
-        php artisan key:generate
-        ```
-   
-    3.4. Jalankan:
-        ```bash
-        php artisan storage:link
-        ```
-
-    3.5. Jalankan:
-        ```bash
-        php artisan cache:clear
-        ```
    
 4. Import database
 5. Untuk menjalankan website pada browser, buka [http://localhost:1011]
