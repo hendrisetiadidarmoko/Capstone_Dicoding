@@ -3,17 +3,7 @@
 ## Instalasi
 1. Docker Engine
 
-## Struktur Folder
- ├── Deployment
-    ├── src
-     ... (kode laravel)
-    ├── php
-      local.ini
-    └── mysql
-      my.cnf
-    ├── nginx
-Dockerfile
-docker-compose.yml
+
 ## <b>Struktur Folder</b>
 <pre>
 |── Deployment
@@ -54,16 +44,12 @@ docker-compose.yml
         DB_USERNAME=root
         DB_PASSWORD=admin
        
-    3.4 php artisan key:generate
-    3.5 php artisan storage:link
-    3.5 php artisan cache:clear
+    3.4 ```php artisan key:generate
+    3.5 ```php artisan storage:link
+    3.5 ```php artisan cache:clear
 4. Import database 
 5. untuk menjalankan website pada browser:
        http://localhost:1011
-   
-4. Import database
-5. Untuk menjalankan website pada browser, buka [http://localhost:1011]
-
 
 
 
