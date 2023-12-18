@@ -78,7 +78,7 @@ docker-compose.yml
         ```
    
 4. Import database
-5. Untuk menjalankan website pada browser, buka [http://localhost:1011](http://localhost:1011)
+5. Untuk menjalankan website pada browser, buka [http://localhost:1011]
 
 
 
