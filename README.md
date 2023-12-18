@@ -9,10 +9,11 @@
 |   ├── src
 |   │   ... (kode Laravel)
 |   ├── php
-|   │   local.ini
+|   │       local.ini
 |   ├── mysql
-|   │   my.cnf
-|   └── nginx
+|   │       my.cnf
+|   └── nginx|   │
+|   │       app.conf     
 |── Dockerfile
 └── docker-compose.yml
 </pre>
@@ -60,4 +61,8 @@
    
 4. Import database
 5. Untuk menjalankan website pada browser, buka [http://localhost:1011](http://localhost:1011)
+
+
+
+
 
