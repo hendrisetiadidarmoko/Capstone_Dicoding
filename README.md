@@ -3,8 +3,8 @@
 ## Instalasi
 1. Docker Engine
 
+## <b>Struktur Folder</b>
 <pre>
-<b>Struktur Folder</b>
 |── Deployment
 |   ├── src
 |   │   ... (kode Laravel)
