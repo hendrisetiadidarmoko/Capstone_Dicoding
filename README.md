@@ -4,16 +4,16 @@
 1. Docker Engine
 
 ## Struktur Folder
- ├── Deployment
-    ├── src
-      ... (kode laravel)
-    ├── php
-      local.ini
-    └── mysql
-      my.cnf
-    ├── nginx
-Dockerfile
-docker-compose.yml
+├── Deployment
+│ ├── src
+│ │ ... (kode Laravel)
+│ ├── php
+│ │ local.ini
+│ ├── mysql
+│ │ my.cnf
+│ └── nginx
+├── Dockerfile
+└── docker-compose.yml
 
 ## Cara Penggunaan
 
