@@ -68,5 +68,5 @@
  https://hub.docker.com/repository/docker/lffdevops/capstone_dicoding
 
 ## Hasilnya
-![Deskripsi Gambar](src/public/assets/article-images/berhasil jalan di dalam kontainer.png)
+<img src="/src/public/assets/article-images/berhasil jalan di dalam kontainer.png">
 
