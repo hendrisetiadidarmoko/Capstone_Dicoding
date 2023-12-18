@@ -6,3 +6,5 @@ Edugot merupakan sebuah website edukasi yang memperkenalkan dan memberikan infor
 </p>
 
 
+## Link Website
+<a href="https://edugotcapstone.000webhostapp.com/ "></a>
