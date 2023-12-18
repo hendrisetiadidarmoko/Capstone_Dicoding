@@ -36,14 +36,15 @@
         ```
 
         Ubah nilai-nilai berikut dalam file `.env`:
-        ```env
+        ```
         DB_CONNECTION=mysql
         DB_HOST=db
         DB_PORT=3306
         DB_DATABASE=edugot_db
         DB_USERNAME=root
         DB_PASSWORD=admin
-    
+        ```
+     <pre>    
     `3.4 `
         ```bash 
         php artisan key:generate`
@@ -56,6 +57,7 @@
         ```bash
         php artisan cache:clear
         ```
+    </pre>
 5. Import database 
 6. untuk menjalankan website pada browser:
        http://localhost:1011
