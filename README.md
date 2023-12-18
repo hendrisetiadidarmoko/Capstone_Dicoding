@@ -52,8 +52,7 @@
 6. untuk menjalankan website pada browser:
        http://localhost:1011
 
-## Hasilnya
-![Berjalan di dalam kontainer ](src/public/assets/article-images/berhasil jalan di dalam kontainer.png)
+
 
 
 
