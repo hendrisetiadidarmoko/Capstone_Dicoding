@@ -43,11 +43,18 @@
         DB_DATABASE=edugot_db
         DB_USERNAME=root
         DB_PASSWORD=admin
-   `3.4 php artisan key:generate`  
-    `3.5 php artisan storage:link`  
-    `3.6 php artisan cache:clear`
-5. Import database 
-6. untuk menjalankan website pada browser:
+    3.4  ```bash
+    php artisan key:generate
+    ```
+    3.4  ```bash
+   php artisan storage:link
+    ```
+    3.4  ```bash
+   php artisan cache:clear
+    ```
+
+4. Import database 
+5. untuk menjalankan website pada browser:
        http://localhost:1011
 
 ## Repositori DockerHub
