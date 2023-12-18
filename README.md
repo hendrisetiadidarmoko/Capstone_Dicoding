@@ -44,14 +44,16 @@
         DB_USERNAME=root
         DB_PASSWORD=admin
     <pre>
-    3.4 php artisan key:generate
-    3.5 php artisan storage:link
-    3.5 php artisan cache:clear
+    3.4 `php artisan key:generate`
+    3.5 `php artisan storage:link`
+    3.6 `php artisan cache:clear`
     </pre>
 5. Import database 
 6. untuk menjalankan website pada browser:
        http://localhost:1011
 
+## Hasilnya
+![Berjalan di dalam kontainer ](src/public/assets/article-images/berhasil jalan di dalam kontainer.png)
 
 
 
