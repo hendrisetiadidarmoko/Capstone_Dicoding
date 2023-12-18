@@ -1,6 +1,6 @@
 @extends('mainpage')
 @section('content')
-<section>
+<section class="vh-100">
     <div class="container">
         <div class="catalog">
             <div class=" profile-message p-3">
