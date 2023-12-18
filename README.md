@@ -7,5 +7,5 @@ Edugot merupakan sebuah website edukasi yang memperkenalkan dan memberikan infor
 
 
 ## Link Website
-[Edugot Website](https://edugotcapstone.000webhostapp.com/)
+[Website Edugot: Solusi Inovatif untuk Pengelolaan Sampah Rumah Tangga di Indonesia](https://edugotcapstone.000webhostapp.com/)
 
