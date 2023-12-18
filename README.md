@@ -12,7 +12,7 @@
 |   │       local.ini
 |   ├── mysql
 |   │       my.cnf
-|   └── nginx|   │
+|   └── nginx|
 |   │       app.conf     
 |── Dockerfile
 └── docker-compose.yml
