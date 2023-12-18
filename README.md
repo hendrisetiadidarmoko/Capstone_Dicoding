@@ -36,7 +36,7 @@
         ```
 
         Ubah nilai-nilai berikut dalam file `.env`:
-        ```
+       
         DB_CONNECTION=mysql
         DB_HOST=db
         DB_PORT=3306
@@ -45,18 +45,9 @@
         DB_PASSWORD=admin
         ```
      <pre>    
-    `3.4 `
-        ```bash 
-        php artisan key:generate`
-        ```
-    `3.5 `
-        ```bash
-        php artisan storage:link
-        ```
-    `3.6`
-        ```bash
-        php artisan cache:clear
-        ```
+    3.4 php artisan key:generate    
+    3.5 php artisan storage:link
+    3.6 php artisan cache:clear
     </pre>
 5. Import database 
 6. untuk menjalankan website pada browser:
