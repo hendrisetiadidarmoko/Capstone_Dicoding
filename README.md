@@ -3,17 +3,19 @@
 ## Instalasi
 1. Docker Engine
 
-## Struktur Folder
-├── Deployment
-│ ├── src
-│ │ ... (kode Laravel)
-│ ├── php
-│ │ local.ini
-│ ├── mysql
-│ │ my.cnf
-│ └── nginx
-├── Dockerfile
+<pre>
+<b>Struktur Folder</b>
+|── Deployment
+|   ├── src
+|   │   ... (kode Laravel)
+|   ├── php
+|   │   local.ini
+|   ├── mysql
+|   │   my.cnf
+|   └── nginx
+|── Dockerfile
 └── docker-compose.yml
+</pre>
 
 ## Cara Penggunaan
 
