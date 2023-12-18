@@ -23,7 +23,7 @@
 
 1. `docker compose build`
 2. `docker compose up -d`
-3.  'Masuk kontainer php'
+3.  `Masuk kontainer php`
     ```bash
     docker-compose exec php /bin/bash
     ```
@@ -45,9 +45,9 @@
         DB_PASSWORD=admin
         ```
      <pre>    
-    3.4 php artisan key:generate    
-    3.5 php artisan storage:link
-    3.6 php artisan cache:clear
+    3.4 `php artisan key:generate` 
+    3.5 `php artisan storage:link`
+    3.6 `php artisan cache:clear`
     </pre>
 5. Import database 
 6. untuk menjalankan website pada browser:
